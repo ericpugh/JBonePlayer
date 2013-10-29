@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{description}}">
+    <meta name="author" content="">
+
+    <!-- Facebook Open Graph (FBOG) Meta Tags -->
+    <meta property="og:title" content="{{title}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="{{description}}"/>
+    <meta property="og:image" content="{{image}}"/>
+    <meta property="og:url" content="{{appUrl}}"/>
+
+    <!-- Twitter Cards Meta Tags -->
+    <!-- TC: URL of the page being shared -->
+    <meta name="twitter:url" content="{{appUrl}}">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image" content="{{image}}">
+
+    <!-- Bootstrap 3.0 -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+
+    <!-- JPlayer Skin -->
+    <link rel="stylesheet" type="text/css" href="js/lib/jquery/jplayer/skins/lsap/jplayer.lsap.css" rel="stylesheet" />
+    <!-- LSAP Base Styles -->
+    <link rel="stylesheet" type="text/css" href="css/lsap-base.css">
+    <!-- Theme -->
+    <link rel="stylesheet" type="text/css" href="css/colors.css">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="js/lib/html5shiv.js"></script>
+          <script src="js/lib/respond.min.js"></script>
+        <![endif]-->
+
+    <!-- Fav and touch icons
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="../assets/ico/favicon.png">
+         -->
+  </head>
+
+  <body>
+  <!-- Begin Template Customization --> 
+
+  <!-- Wrap all page content here -->
+  <div id="app wrap"> 
+      <div class="row custom-ContainerHeight"> 
+
+        <div id="bbgContentTall left-col" class="col-md-9"> 
+            <!-- header -->
+            <div id="branding" class="custom-PlayerHeader clearfix"></div>
+          
+          <!-- Stream Details -->
+          <div id="stream"></div>
+          
+          <!-- Podcasts -->
+          <div id="podcasts"></div>
+
+        </div> <!-- /#left-col -->
+
+        <div id="right-col" class="col-md-3 custom-SidePanel"> 
+            <div id="menu" class="custom-SideMenu"></div>
+        </div> <!-- /#right-col -->
+
+      </div> <!-- /.row -->
+
+        <!-- Begin Footer -->
+          <div id="footer">
+            <div class="audio-stream">
+            <!-- audio player -->
+            <div id="jp-player-main-container">
+            <div id="jp-player" class="jp-jplayer"></div>
+            <div id="jp_container_1" class="jp-audio">
+                <div class="jp-type-single">
+                <div class="jp-gui jp-interface"> 
+                    <!-- Col 1 -->
+                    <div class="custom-Col1">
+                    <ul class="jp-controls">
+                        <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                        <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                    </ul>
+                    </div>
+                    <!-- Col 2 -->
+                    <div class="custom-Col2">
+                    <div class="custom-PlayerLabel">Live Stream</div>
+                    <div class="jp-progress">
+                        <div class="jp-seek-bar">
+                        <div class="jp-play-bar"></div>
+                        </div>
+                    </div>
+                    <div class="jp-time-holder">
+                        <div class="jp-current-time"></div>
+                        <!-- Used only on Podcast Page <div class="jp-duration"></div> --> 
+                    </div>
+                    </div>
+                    <!-- Col 3 -->
+                    <div class="custom-Col3">
+                    <ul class="jp-controls">
+                        <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                        <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                    </ul>
+                    <div class="jp-volume-bar">
+                        <div class="jp-volume-bar-value"></div>
+                        <div class="jp-volume-max"></div>
+                    </div>
+                    </div>
+                    <div class="jp-no-solution"> <span>Update Required</span> Your device does not support the playback of streaming MP3 via native controls and you do not have the Adobe Flash Player available. </div>
+                        </div>
+                </div>
+              
+              
+            </div>
+          </div><!-- /#footer -->
+
+    </div> <!-- /#app -->
+
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery/jplayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="js/jquery.bbgPlayer.js"></script>
+  <script type="text/javascript" src="js/lib/underscore-min.js"></script>
+  <script type="text/javascript" src="js/lib/backbone-min.js"></script>
+  <script type="text/javascript" src="js/lib/backbone.poller.min.js"></script>
+  <script type="text/javascript" src="js/lib/handlebars.js"></script>
+  <!-- Models -->
+  <script type="text/javascript" src="js/models/channel.js"></script>
+  <script type="text/javascript" src="js/models/stream.js"></script>
+  <script type="text/javascript" src="js/models/podcastlist.js"></script>
+  <!-- Views -->
+  <script type="text/javascript" src="js/templates.js"></script>
+  <script type="text/javascript" src="js/views/channelbranding.js"></script>
+  <script type="text/javascript" src="js/views/channelmenu.js"></script>
+  <script type="text/javascript" src="js/views/streamdetails.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{ 
+	"title": "BBG Stream Player",
+	"link": "http://www.wamu.org",
+	"image": "img/tempimage-brandlogo.gif",
+	"styles": [],
+	"category": "News",
+	"social": {
+		"facebookUrl": "https://www.facebook.com/wamu885",
+		"twitterHandle": "NPR",
+		"googlePlusUrl": "https://plus.google.com/+NPR/posts",
+		"websiteUrl": "https://www.npr.org"
+	},
+	"location": {
+		"city": "Washington DC",
+		"country": "USA",
+		"local": "Southeast"
+	},
+	"menu": {
+		"listen": true,
+		"schedule": true,
+		"podcasts": true,
+		"about": true,
+		"help": true
+	}
+	"playerConfig": {
+		"embedPlayer": null,
+		"popoutPlayer": null,
+		"styleFolder": "css/",
+		"trackIncrement": 30,
+		"trackingEnabled": true,
+		"metadataStreamEnabled": true,
+		"autoplay": false,
+		"trackEventCategory": "Live Audio Streaming Player",
+		"jplayerSwfLocation": "js/lib/jquery/jplayer",
+		"jplayerSolution": "html, flash",
+		"showPosters": false
+	}
+}
