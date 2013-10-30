@@ -8,10 +8,10 @@ var ChannelBranding = Backbone.View.extend({
 
 	render: function () {
 		var data = {
-			title: this.model.attributes.channel.brandingTitle,
-			link: this.model.attributes.channel.brandingLink,
+			title: this.model.attributes.channel.title,
+			link: this.model.attributes.channel.link,
 			location: this.model.attributes.channel.location,
-			image: this.model.attributes.channel.brandingImage,
+			image: this.model.attributes.channel.image,
 		};
 		this.$el.html(this.template(data));
 		return this;

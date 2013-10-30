@@ -116,7 +116,6 @@
 				social: '.jp-social',
 				location: '.jp-location',
 				brandingLink: '.player-branding a',
-				footer: '#footer',
 				menu: '#menu ul.nav'
 			},
 			labels: {
@@ -166,7 +165,6 @@
 				local: null
 			},
 			brandingLink: null, // the link to show in the header branding
-			footerContent: '<p>A BBG Player</p>' // the HTML to display within the footer
 		}
 		self.options = $.extend(true,{},defaults,options);
 		self.config = bbgPlayerConfig;
@@ -352,11 +350,6 @@
 				parseStreams(configStreamsXml);
 			}
 			
-			// write in any footer content
-			if (self.options.footerContent && self.options.footerContent.length > 0) {
-				self.bbgCss.jq.footer.html(self.options.footerContent);
-			}
-
 			//output the Station category
 			if (self.options.category !== undefined && self.options.category.length > 0) {
 				setCategory(self.options.category);

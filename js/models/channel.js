@@ -1,30 +1,33 @@
 var Channel = Backbone.Model.extend({
 
-	urlRoot: 'js/channel.config.json',
+	urlRoot: 'js/app.config.json',
 
 	defaults: {
-		title: 'BBG Stream Player',
-		link: '',
-		image: '',
-		appUrl: '',
-		styles: [],
-		social: {
-			facebookUrl: '',
-			twitterHandle: '',
-			googlePlusUrl: '',
-			websiteUrl: ''
-		},
-		location: {
-			city: '',
-			country: '',
-			local: ''
-		},
-		menu: {
-			listen: true,
-			schedule: false,
-			podcasts: false,
-			about: true,
-			help: true
+		streams: [],
+		channel: {
+			title: 'BBG Stream Player',
+			link: '',
+			image: '',
+			appUrl: '',
+			styles: [],
+			social: {
+				facebookUrl: '',
+				twitterHandle: '',
+				googlePlusUrl: '',
+				websiteUrl: ''
+			},
+			location: {
+				city: '',
+				country: '',
+				local: ''
+			},
+			menu: {
+				listen: true,
+				schedule: false,
+				podcasts: false,
+				about: true,
+				help: true
+			}
 		},
 		playerConfig: {
 			embedPlayer: null,
@@ -40,7 +43,7 @@ var Channel = Backbone.Model.extend({
 			metadataStreamEnabled: true,
 			autoplay: false,
 			showPosters: false
-		},
+		}
 	},
 
 	initialize: function() {
@@ -48,7 +51,6 @@ var Channel = Backbone.Model.extend({
 		//bind custom functions
 		_.bindAll(this, 'initPlayer');
 	},
-
 
 	initPlayer: function(){
 		var currentStream = this.attributes.streams[0];
@@ -76,6 +78,7 @@ var Channel = Backbone.Model.extend({
 				ended: function(event) {
 				},
 				pause: function(event) {
+					console.log('jplayer play event');
 				},
 				timeupdate: function(event) {
 				},
@@ -84,7 +87,8 @@ var Channel = Backbone.Model.extend({
 					console.log(event);
 				},
 		});
-	},
+	}
+
 
 
 });

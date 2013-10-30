@@ -1,5 +1,7 @@
 var Stream = Backbone.Model.extend({
 
+	urlRoot: 'js/app.config.json',
+
 	defaults: {
 		url: '',
 		dataUrl: '',
@@ -21,29 +23,30 @@ var Stream = Backbone.Model.extend({
 				enabled: true,
 				subject: 'Live Radio',
 				body: 'I wanted to share this online radio station with you.'
-			},
-			embed: {
-				enabled: false,
-				instructions: 'Copy the following to embed the player:',
-				hide: 'Hide'
 			}
-		}
+		},
+		playerConfig: {}
 	},
 
 	initialize: function() {
-		this.attributes.appUrl = document.URL;
-		
+		//this.attributes.appUrl = document.URL;
+		this.set('appUrl', document.URL);
 	},
 	
 	parse: function(data, options) {
-		if('metadata' in data){
+		if('streams' in data){
+			//update model with first item in channel streams array
+			defaults = data.streams[0];
+			defaults.playerConfig = data.playerConfig;
+			return defaults;
+		} else if('metadata' in data){
 			updated = _.clone(this.attributes);
-			//update model with metadata values
+			//update model with remote "metadata" values
 			updated.title = data.metadata.streamtitle;
 			updated.description = data.metadata.station;
 			updated.category = data.metadata.genre;
 			return updated;
-		} 
+		}
 		return data;
 	}
 

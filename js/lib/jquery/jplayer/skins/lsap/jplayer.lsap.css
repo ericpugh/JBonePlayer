@@ -177,20 +177,20 @@ a.jp-podcast-pause {
 
 a.jp-play,
 a.jp-podcast-play {
-	background: url("../../img/iconsprite.png") 0 0 no-repeat;
+	background: url("../../../../../img/iconsprite.png") 0 0 no-repeat;
 }
 a.jp-play:hover,
 a.jp-podcast-play:hover {
-	background: url("../../img/iconsprite.png") -41px 0 no-repeat;
+	background: url("../../../../../img/iconsprite.png") -41px 0 no-repeat;
 }
 a.jp-pause,
 a.jp-podcast-pause {
-	background: url("../../img/iconsprite.png") 0 -42px no-repeat;
+	background: url("../../../../../img/iconsprite.png") 0 -42px no-repeat;
 	display: none;
 }
 a.jp-pause:hover,
 a.jp-podcast-pause:hover {
-	background: url("../../img/iconsprite.png") -41px -42px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -41px -42px no-repeat;
 }
 
 a.jp-stop, a.jp-previous, a.jp-next {
@@ -200,26 +200,26 @@ a.jp-stop, a.jp-previous, a.jp-next {
 }
 
 a.jp-stop {
-	background: url("../../img/iconsprite.png") 0 -83px no-repeat;
+	background: url("../../../../../img/iconsprite.png") 0 -83px no-repeat;
 	margin-left:10px;
 }
 
 a.jp-stop:hover {
-	background: url("../../img/iconsprite.png") -29px -83px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -29px -83px no-repeat;
 }
 
 a.jp-previous {
-	background: url("../../img/iconsprite.png") 0 -112px no-repeat;
+	background: url("../../../../../img/iconsprite.png") 0 -112px no-repeat;
 }
 a.jp-previous:hover {
-	background: url("../../img/iconsprite.png") -29px -112px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -29px -112px no-repeat;
 }
 
 a.jp-next {
-	background: url("../../img/iconsprite.png") 0 -141px no-repeat;
+	background: url("../../../../../img/iconsprite.png") 0 -141px no-repeat;
 }
 a.jp-next:hover {
-	background: url("../../img/iconsprite.png") -29px -141px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -29px -141px no-repeat;
 }
 
 /* @end */
@@ -228,7 +228,7 @@ a.jp-next:hover {
 
 div.jp-progress {
 	overflow:hidden;
-	background: url("../../img/jp-progress-bg.png") 0 0 repeat transparent;
+	background: url("jp-progress-bg.png") 0 0 repeat transparent;
 }
 div.jp-audio div.jp-progress {
 	/*position: absolute;*/
@@ -252,7 +252,7 @@ div.jp-video div.jp-progress {
 }
 div.jp-seek-bar,
 div.jp-podcast-seek-bar {
-	/*background: url("../../img/iconsprite.png") 0 -202px repeat-x;*/
+	/*background: url("../../../../../img/iconsprite.png") 0 -202px repeat-x;*/
 	background:white;
 	width:0px;
 	height:100%;
@@ -263,7 +263,7 @@ div.jp-podcast-seek-bar {
 }
 div.jp-play-bar,
 div.jp-podcast-play-bar {
-	/*background: url("../../img/iconsprite.png") 0 -218px repeat-x        ;*/
+	/*background: url("../../../../../img/iconsprite.png") 0 -218px repeat-x        ;*/
 	background:#34b5d0;
 	width:0px;
 	height:100%;
@@ -324,23 +324,23 @@ div.jp-video a.jp-volume-max {
 }
 
 a.jp-mute {
-	background: url("../../img/iconsprite.png") 0 -170px no-repeat;
+	background: url("../../../../../img/iconsprite.png") 0 -170px no-repeat;
 }
 a.jp-mute:hover {
-	background: url("../../img/iconsprite.png") -19px -170px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -19px -170px no-repeat;
 }
 a.jp-unmute {
-	background: url("../../img/iconsprite.png") -60px -170px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -60px -170px no-repeat;
 	display: none;
 }
 a.jp-unmute:hover {
-	background: url("../../img/iconsprite.png") -79px -170px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -79px -170px no-repeat;
 }
 a.jp-volume-max {
-	background: url("../../img/iconsprite.png") 0 -186px no-repeat;
+	background: url("../../../../../img/iconsprite.png") 0 -186px no-repeat;
 }
 a.jp-volume-max:hover {
-	background: url("../../img/iconsprite.png") -19px -186px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -19px -186px no-repeat;
 }
 
 div.jp-volume-bar {
@@ -602,55 +602,55 @@ ul.jp-toggles li a {
 }
 
 a.jp-full-screen {
-	background: url("../../img/iconsprite.png") 0 -310px no-repeat;
+	background: url("../../../../../img/iconsprite.png") 0 -310px no-repeat;
 	margin-left: 20px;
 }
 
 a.jp-full-screen:hover {
-	background: url("../../img/iconsprite.png") -30px -310px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -30px -310px no-repeat;
 }
 
 a.jp-restore-screen {
-	background: url("../../img/iconsprite.png") -60px -310px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -60px -310px no-repeat;
 	margin-left: 20px;
 }
 
 a.jp-restore-screen:hover {
-	background: url("../../img/iconsprite.png") -90px -310px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -90px -310px no-repeat;
 }
 
 a.jp-repeat {
-	background: url("../../img/iconsprite.png") 0 -290px no-repeat;
+	background: url("../../../../../img/iconsprite.png") 0 -290px no-repeat;
 }
 
 a.jp-repeat:hover {
-	background: url("../../img/iconsprite.png") -30px -290px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -30px -290px no-repeat;
 }
 
 a.jp-repeat-off {
-	background: url("../../img/iconsprite.png") -60px -290px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -60px -290px no-repeat;
 }
 
 a.jp-repeat-off:hover {
-	background: url("../../img/iconsprite.png") -90px -290px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -90px -290px no-repeat;
 }
 
 a.jp-shuffle {
-	background: url("../../img/iconsprite.png") 0 -270px no-repeat;
+	background: url("../../../../../img/iconsprite.png") 0 -270px no-repeat;
 	margin-left: 5px;
 }
 
 a.jp-shuffle:hover {
-	background: url("../../img/iconsprite.png") -30px -270px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -30px -270px no-repeat;
 }
 
 a.jp-shuffle-off {
-	background: url("../../img/iconsprite.png") -60px -270px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -60px -270px no-repeat;
 	margin-left: 5px;
 }
 
 a.jp-shuffle-off:hover {
-	background: url("../../img/iconsprite.png") -90px -270px no-repeat;
+	background: url("../../../../../img/iconsprite.png") -90px -270px no-repeat;
 }
 
 

@@ -1,14 +1,27 @@
-{{#if title}}
-	<h1>{{title}}</h1>
-{{/if}}
-{{#if category}}
-	<p>{{category}}</p>
-{{/if}}
-{{#if description}}
-	<div>{{description}}<div>
-{{/if}}
-{{#if location}}
-	<p>location: {{location.local}}</p>
-	<p>city: {{location.city}}</p>
-	<p>country: {{location.country}}</p>
-{{/if}}
+    <div class="player-branding"><a></a></div>
+
+    <div class="custom-Content">
+       <hr class="custom-dottedline" />
+    	<div class="custom-LiveStreamStationName clearfix">
+	      <!-- Play/Pause Toggle button -->
+          <div id="btnPlayPause">
+              <span id="btnPlay" style="display: block;">Play</span>
+              <span id="btnPause" style="display: none;">Pause</span>
+           </div>
+          <h2 class="brand jp-station">{{title}}</h2>
+
+        </div>
+    </div>
+    <hr class="custom-solidline" />
+    
+      <h3 class="jp-song">{{description}}</h3>
+      <p>{{category}}</p>
+
+      <div class="jp-poster hidden-phone"></div>
+      <!-- End Player --> 
+
+      <div class="jp-share custom-ShareOn" id="socialmini"> <span><i class="icon-share-alt"></i>SHARE THIS SHOW</span>
+        <ul class="jp-share socialmenu clearfix">
+        </ul>
+      </div><!-- /.jp-share --> 
+      

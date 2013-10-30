@@ -1,4 +1,5 @@
 <div class="sidebar-nav">
+
   {{#if menu}}
   <ul class="nav nav-list">
     {{#if menu.listen}}
@@ -19,10 +20,32 @@
   </ul>
   {{/if}}
 </div>
-<!-- End Side Menu --> 
-<!-- Begin Web/Social Presence Links -->
-<ul class="jp-social custom-WebSocialPresence">
-  <li class="custom-Header">Visit us on the web</li>
-</ul>
-<!-- End Web/Social Presence Links --> 
+
+{{#if social}}
+  <ul class="jp-social custom-WebSocialPresence">
+    <li class="custom-Header">Visit us on the web</li>
+    {{#if social.facebookUrl}}
+      <li>
+        <a href="{{social.facebookUrl}}" target="_blank" class="jp-facebook-social"><i class="icon-facebook icon-2x"></i><span>Facebook</span></a>
+      </li>
+    {{/if}}
+    {{#if social.twitterHandle}}
+      <li>
+        <a href="http://twitter.com/{{social.twitterHandle}}" target="_blank" class="jp-twitter-social"><i class="icon-twitter icon-2x"></i><span>Twitter</span></a>
+      </li>
+    {{/if}}
+    {{#if social.googlePlusUrl}}
+      <li>
+        <a href="{{social.googlePlusUrl}}" target="_blank" class="jp-google-plus-social"><i class="icon-google-plus icon-2x"></i><span>Google</span></a>
+      </li>
+    {{/if}}
+    {{#if social.websiteUrl}}
+      <li>
+        <a href="{{social.websiteUrl}}" target="_blank" class="jp-web-social"><i class="icon-external-link icon-2x"></i><span>Web</span></a>
+      </li>
+    {{/if}}
+  </ul>
+{{/if}}
+
 </div>
+

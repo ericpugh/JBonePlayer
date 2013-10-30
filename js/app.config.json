@@ -5,11 +5,14 @@
 			"format": "mp3",
 			"title": "Currently Playing",
 			"description": "Stream information unavailable",
-			"siteUrl": "http://wamu.org",
+			"siteUrl": "http://voanews.com",
 			"podcastUrl": "http://www.npr.org/rss/podcast.php?id=510299"
 		}
 	],
 	"channel": {
+		"title": "BBG Stream Player",
+		"link": "http://voanews.com",
+		"image": "img/tempimage-brandlogo.gif",
 		"styles": [],
 		"showPosters": false,
 		"showSiteUrl": false,
@@ -18,7 +21,7 @@
 			"facebookUrl": "https://www.facebook.com/wamu885",
 			"twitterHandle": "NPR",
 			"googlePlusUrl": "https://plus.google.com/+NPR/posts",
-			"websiteUrl": "https://www.npr.org"
+			"websiteUrl": "http://voanews.com"
 		},
 		"share": { 
 			"shareLink": "",
@@ -32,11 +35,6 @@
 				"enabled": true,
 				"subject": "Live Radio",
 				"body": "I wanted to share this online radio station with you."
-			},
-			"embed": {
-				"enabled": false,
-				"instructions": "Copy the following to embed the player:",
-				"hide": "Hide"
 			}
 		},
 		"location": {
@@ -44,10 +42,6 @@
 			"country": "USA",
 			"local": "Southeast"
 		},
-		"footerContent": "",
-		"brandingTitle": "BBG Stream Player",
-		"brandingLink": "http://www.npr.org",
-		"brandingImage": "img/tempimage-brandlogo.gif",
 		"menu": {
 			"listen": true,
 			"schedule": true,
@@ -60,7 +54,7 @@
 	"playerConfig": {
 		"embedPlayer": null,
 		"popoutPlayer": null,
-		"metadataRemoteService": "http://apps.innovation-series.com/streamreader/remote.streaminfo.php?l=http://sc9.iad.llnw.net/stream/npr_music2", 
+		"metadataRemoteService": "http://apps.innovation-series.com/streamreader/remote.streaminfo.php", 
 		"feedparserRemoteService": "http://apps.innovation-series.com/streamreader/remote.feedparser.php",
 		"styleFolder": "css/",
 		"trackIncrement": 30,
