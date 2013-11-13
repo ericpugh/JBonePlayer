@@ -4,6 +4,9 @@ var ChannelBranding = Backbone.View.extend({
 
 	initialize: function() {
 		this.listenTo(this.model, "change", this.render);
+		//update metatags
+		$('title').html(this.model.attributes.channel.title);
+		$('meta[property="description"]').attr("content", this.model.attributes.channel.description);	
 	},
 
 	render: function () {

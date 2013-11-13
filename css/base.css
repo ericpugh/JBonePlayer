@@ -115,9 +115,8 @@ a:focus {
 {
 	padding:0;
 }
-.custom-ContainerHeight .custom-MCArea
+#main-content
 {
-	display: none;
 	padding:10px 15px 25px 45px;
 }
 .jPanelMenu-panel .custom-ContainerHeight .custom-MCArea
@@ -171,7 +170,7 @@ a:focus {
 }
 #menu{ margin-top: 30px; }
 .jPanelMenu #menu{ margin-top: 0px; }
-.custom-SideMenu{ display: none; }
+.custom-SideMenu{}
 .custom-SideMenu .nav > li > a
 {
 	text-transform:uppercase;
@@ -401,7 +400,6 @@ ul.jp-controls li a {
 }
 /** Audio Player **/
 .audio-stream {
-	display: none;
 	position: relative;
 }
 /** Player Controls **/

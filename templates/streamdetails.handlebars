@@ -1,5 +1,5 @@
+<div class="stream-details" itemscope itemtype="http://schema.org/AudioObject">
     <div class="player-branding"><a></a></div>
-
     <div class="custom-Content">
        <hr class="custom-dottedline" />
     	<div class="custom-LiveStreamStationName clearfix">
@@ -8,20 +8,42 @@
               <span id="btnPlay" style="display: block;">Play</span>
               <span id="btnPause" style="display: none;">Pause</span>
            </div>
-          <h2 class="brand jp-station">{{title}}</h2>
+          <h2 class="brand jp-station" itemprop="name">{{title}}</h2>
 
         </div>
     </div>
     <hr class="custom-solidline" />
-    
-      <h3 class="jp-song">{{description}}</h3>
-      <p>{{category}}</p>
+      
+      <h3 class="jp-song" itemprop="description">{{description}}</h3>
+      <p class="jp-category" itemprop="genre">{{category}}</p>
 
       <div class="jp-poster hidden-phone"></div>
       <!-- End Player --> 
 
+      {{#if share}}
       <div class="jp-share custom-ShareOn" id="socialmini"> <span><i class="icon-share-alt"></i>SHARE THIS SHOW</span>
         <ul class="jp-share socialmenu clearfix">
+        {{#if share.twitter.enabled}}
+            <li>
+              <a href="https://mobile.twitter.com/compose/tweet?status={{appUrl}}" target="_blank" class="jp-twitter-share"><i class="icon-twitter icon-2x"></i></a>
+            </li>
+        {{/if}}
+        {{#if share.facebook.enabled}}
+            <li>
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{appUrl}}" target="_blank" class="jp-facebook-share"><i class="icon-facebook icon-2x"></i></a>
+            </li>
+        {{/if}}
+        {{#if share.email.enabled}}
+            <li>
+              <a href="mailto:?subject={{share.email.subject}}&amp;body=%0A%0A{{share.email.body}}{{appUrl}}" target="_blank" class="jp-email-share"><i class="icon-envelope icon-2x"></i></a>
+            </li>
+        {{/if}}
         </ul>
       </div><!-- /.jp-share --> 
-      
+      {{/if}}
+
+        <meta itemprop="contentURL" content="{{url}}" />
+        <meta itemprop="duration" content="" />
+        <meta itemprop="thumbnailUrl" content="" />
+
+</div>    

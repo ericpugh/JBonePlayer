@@ -29,21 +29,21 @@ var Stream = Backbone.Model.extend({
 	},
 
 	initialize: function() {
-		//this.attributes.appUrl = document.URL;
 		this.set('appUrl', document.URL);
 	},
 	
 	parse: function(data, options) {
 		if('streams' in data){
-			//update model with first item in channel streams array
+			//update model with defaults from app.config.json
 			defaults = data.streams[0];
 			defaults.playerConfig = data.playerConfig;
+			defaults.share = data.channel.share;
 			return defaults;
 		} else if('metadata' in data){
 			updated = _.clone(this.attributes);
 			//update model with remote "metadata" values
-			updated.title = data.metadata.streamtitle;
-			updated.description = data.metadata.station;
+			updated.title = data.metadata.station;
+			updated.description = data.metadata.streamtitle;
 			updated.category = data.metadata.genre;
 			return updated;
 		}

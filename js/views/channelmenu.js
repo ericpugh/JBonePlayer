@@ -8,8 +8,8 @@ var ChannelMenu = Backbone.View.extend({
 
 	render: function () {
 		var data = {
-			share: this.model.attributes.channel.share,
 			menu: this.model.attributes.channel.menu,
+			social: this.model.attributes.channel.social
 		};
 		this.$el.html(this.template(data));
 		return this;

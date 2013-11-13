@@ -32,11 +32,12 @@
 					    url: stream.get('playerConfig').metadataRemoteService + '?l=' + stream.get('streamUrl')
 					});
 					poller.on('success', function(){
-					 console.log('polling...'); 
+					 //console.log('polling...'); 
 					});
 					poller.start();
 				}
 			});
+
 
 			/*console.log("Channel Model:");
 			console.log(this.channelModel);
@@ -61,30 +62,40 @@
 			});
 			$('#main-content').html(this.streamDetailsView.render().el);
 
+			this.podcasts = new Podcasts();
+			this.podcasts.fetch();
+			this.PodcastsView = new PodcastsView({collection: this.podcasts});
+			console.log(this.podcasts);
+
 
 		},
 
 		listen: function(){
+			this.streamDetailsView = new StreamDetails({
+				model: this.streamModel
+			});
+			$('#main-content').html(this.streamDetailsView.render().el);
+		},
 
-
+		schedule: function () {
+			$('#main-content').html('<p>TODO Schedule Page</p>');
 		},
 
 		podcasts: function () {
 			//fetch podcasts model
 			//render
-			alert('the podcasts page');
+			$('#main-content').html(this.PodcastsView.render().el);
 		},
 
 		about: function () {
-			//alert(this.channelModel.get('description'));
+			$('#main-content').html(this.channelModel.get('description'));
+			//console.log(this.channelModel);
 		},
 
 		help: function () {
-			alert('the help page');
-		},
-
-		help: function () {
-			alert('the help page');
+			//output the static help.handlebars tempalte
+			var help = Handlebars.getTemplate('help');
+			$('#main-content').html(help);
 		},
 
 	});

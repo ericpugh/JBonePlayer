@@ -1,57 +1,57 @@
 body {
-	border-top: 3px solid #29059c;
+	border-top: 3px solid #34b5d0;
 }
 a {
-	color: #29059c;
+	color: #34b5d0;
 }
 a:hover, a:focus {
-	color: #29059c;
+	color: #34b5d0;
 }
 .btn {
-	background: #29059c;
+	background: #34b5d0;
 }
 #footer {
-	background-color: #29059c;
+	background-color: #34b5d0;
 }
 div.jp-play-bar, div.jp-podcast-play-bar {
-	background: #29059c;
+	background: #34b5d0;
 }
 .jp-station {
-	color: #29059c;
+	color: #34b5d0;
 }
 .bbgPCRow.playing {
-	background: #29059c;
+	background: #34b5d0;
 }
 .bbgPCRow .bbgPCurl a, #podcastDetails .detailPCUrl a, .custom-LiveStreamStationName #btnPlayPause span {
-	background-color: #29059c;
+	background-color: #34b5d0;
 }
 .bbgPCRow.playing .bbgPCurl a {
 	background-color: transparent;
 }
 .jp-volume-bar {
-	background-color: #29059c;
+	background-color: #34b5d0;
 }
 div.jp-play-bar, div.jp-podcast-play-bar {
-	background: #29059c;
+	background: #34b5d0;
 }
 .nav > li > a:hover {
-	color: #29059c;
+	color: #34b5d0;
 }
 .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
-	color: #29059c;
+	color: #34b5d0;
 }
 .custom-ShareOn .icon-share-alt {
-	background: #29059c;
+	background: #34b5d0;
 }
 .custom-WebSocialPresence li a:hover {
-	color: #29059c;
+	color: #34b5d0;
 }
 .custom-AboutStation .custom-Header {
-	color: #29059c;
+	color: #34b5d0;
 }
 #jPanelMenu-menu {
-	border-top: 3px solid #29059c;
+	border-top: 3px solid #34b5d0;
 }
 .custom-SidePanel .custom-Preloader i, #bbgContentTall .custom-Preloader i {
-	color: #29059c;
+	color: #34b5d0;
 }

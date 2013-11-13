@@ -8,13 +8,13 @@ var StreamDetails = Backbone.View.extend({
 
 	render: function () {
 		var data = {
+			url: (typeof this.model.attributes.url != 'undefined') ? this.model.attributes.url : "",
 			title: (typeof this.model.attributes.title != 'undefined') ? this.model.attributes.title : "Stream information unavailable",
 			category: (typeof this.model.attributes.category != 'undefined') ? this.model.attributes.category : "",
 			description: (typeof this.model.attributes.description != 'undefined') ? this.model.attributes.description : "",
-			share: (typeof this.model.attributes.share != 'undefined') ? this.model.attributes.share : ""
+			appUrl: (typeof this.model.attributes.appUrl != 'undefined') ? this.model.attributes.appUrl : document.URL,
+			share: (_.isObject(this.model.attributes.share)) ? this.model.attributes.share : ""
 		};
-		console.log('metadata render updated: ');
-		console.log(data);
 		this.$el.html(this.template(data));
 		return this;
 	}
