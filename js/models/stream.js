@@ -29,7 +29,7 @@ var Stream = Backbone.Model.extend({
 	},
 
 	initialize: function() {
-		this.set('appUrl', document.URL);
+		this.set('appUrl', document.URL);		
 	},
 	
 	parse: function(data, options) {

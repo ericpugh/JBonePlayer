@@ -3,7 +3,6 @@ var Podcast = Backbone.Model.extend({
 	urlRoot: '',
 
 	defaults: {
-		id: '',
 		title: '',
 		description: '',
 		duration: '',

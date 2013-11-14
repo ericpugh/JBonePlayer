@@ -6,6 +6,7 @@ var Channel = Backbone.Model.extend({
 		streams: [],
 		channel: {
 			title: 'BBG Stream Player',
+			description: 'This is a demo of the BBG Stream Player',
 			link: '',
 			image: '',
 			appUrl: '',
@@ -78,7 +79,7 @@ var Channel = Backbone.Model.extend({
 				ended: function(event) {
 				},
 				pause: function(event) {
-					console.log('jplayer play event');
+					console.log('jplayer pause event');
 				},
 				timeupdate: function(event) {
 				},

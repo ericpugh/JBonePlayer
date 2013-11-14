@@ -4,6 +4,7 @@
 		routes: {
 			"schedule": "schedule",
 			"podcasts": "podcasts",
+			"podcasts/:cid": "podcast",
 			"about": "about",
 			"help": "help",
 			"error": "error",
@@ -11,9 +12,10 @@
 		},
 
 		initialize: function(){
+
 			console.log('initalize app');
 
-			//Models
+			//Channel
 			this.channelModel = new Channel();			
 			this.channelModel.fetch({
 				success: function(channel){
@@ -23,6 +25,18 @@
 		        }
 			})
 
+	        this.channelBrandingView = new ChannelBranding({
+				model: this.channelModel
+			});
+			$('#branding').html(this.channelBrandingView.render().el);
+	        
+	        this.channelMenuView = new ChannelMenu({
+				model: this.channelModel
+			});
+			$('#menu').html(this.channelMenuView.render().el);
+
+
+			//Stream
 			this.streamModel = new Stream();
 			this.streamModel.fetch({
 				success: function(stream){
@@ -35,38 +49,36 @@
 					 //console.log('polling...'); 
 					});
 					poller.start();
+
+
 				}
 			});
 
-
-			/*console.log("Channel Model:");
-			console.log(this.channelModel);
-
-			console.log("Stream Model:");
-			console.log(this.streamModel);*/
-
-
-	        //Render Views 
-	        this.channelBrandingView = new ChannelBranding({
-				model: this.channelModel
-			});
-			$('#branding').html(this.channelBrandingView.render().el);
-	        
-	        this.channelMenuView = new ChannelMenu({
-				model: this.channelModel
-			});
-			$('#menu').html(this.channelMenuView.render().el);
-			
 			this.streamDetailsView = new StreamDetails({
 				model: this.streamModel
 			});
 			$('#main-content').html(this.streamDetailsView.render().el);
 
-			this.podcasts = new Podcasts();
-			this.podcasts.fetch();
-			this.PodcastsView = new PodcastsView({collection: this.podcasts});
-			console.log(this.podcasts);
+			//TODO how to get this from config??
+			this.podcastUrl = 'http://apps.innovation-series.com/streamreader/remote.feedparser.php?l=http://www.npr.org/rss/podcast.php?id=510299';
 
+			//Podcasts
+			this.podcasts = new Podcasts({
+				url: this.podcastUrl
+			});
+			this.podcasts.fetch();
+			this.PodcastsView = new PodcastsView({
+				collection: this.podcasts
+			});
+			this.podcastDetails = new Podcast();
+			this.podcastDetailsView = new PodcastDetails({
+				model: this.podcastDetails
+			});
+
+			/*console.log("Channel Model:");
+			console.log(this.channelModel);
+			console.log("Stream Model:");
+			console.log(this.streamModel);*/
 
 		},
 
@@ -82,14 +94,20 @@
 		},
 
 		podcasts: function () {
-			//fetch podcasts model
-			//render
+			//display podcasts collection
 			$('#main-content').html(this.PodcastsView.render().el);
 		},
 
+		podcast: function (cid) {
+			//display specific podcast 
+			this.podcastDetailsView.model = this.podcasts.get(cid);
+			$('#main-content').html(this.podcastDetailsView.render().el);
+		},
+
 		about: function () {
-			$('#main-content').html(this.channelModel.get('description'));
-			//console.log(this.channelModel);
+			//TODO template the about page?
+			var channelAttrs = this.channelModel.get('channel');
+			$('#main-content').html(channelAttrs.description);
 		},
 
 		help: function () {

@@ -11,6 +11,7 @@
 	],
 	"channel": {
 		"title": "BBG Stream Player",
+		"description": "This is a demo of the BBG Stream Player",
 		"link": "http://voanews.com",
 		"image": "img/tempimage-brandlogo.gif",
 		"styles": [],
