@@ -733,46 +733,22 @@ bbgPCRow .bbgPCurl
 	color:#717171;
 	display:inline-block;
 }
-.custom-Preloader
-{
-	text-align:center;
-	padding:14px 0 0 0;
+#loading{
+    position:fixed;
+    display: table;
+    z-index:999;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: #FFF;
 }
-.custom-SidePanel .custom-Preloader
-{
-	width:100%;
-	padding:50px 0 0 0;
+#loading i{
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px; 
+    margin-top: -32px;  
+    display: block;
 }
-#footer .custom-Preloader i
-{
-	color:#fff;
-}
-/*	--------------------------------------------------
-	:: Note: Design for a Min Width of 768px
-	-------------------------------------------------- */
-/*
-@media (min-width: 768px) {
-	.player-branding {
-		width: 216px;
-		height: 143px;
-	}
-	.player-branding a {
-		background-repeat: no-repeat;
-		width: 216px;
-		height: 143px;
-		text-indent: -9999px;
-		overflow: hidden;
-		display: block;
-	}
-	.station-branding {
-		background-repeat: no-repeat;
-		background-position: 20px 5px;
-		width: 36px;
-		height: 36px;
-}
-}
-*/
-/*	--------------------------------------------------
-	:: Note: Overwriting Bootstrap styles
-	-------------------------------------------------- */
-	
+

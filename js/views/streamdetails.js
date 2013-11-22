@@ -18,4 +18,5 @@ var StreamDetails = Backbone.View.extend({
 		this.$el.html(this.template(data));
 		return this;
 	}
+
 });

@@ -31,12 +31,11 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
     <!-- JPlayer Skin -->
-    <link rel="stylesheet" type="text/css" href="js/lib/jquery/jplayer/skins/lsap/jplayer.lsap.css" rel="stylesheet" />
-    <!-- LSAP Base Styles -->
+    <link rel="stylesheet" type="text/css" href="js/lib/jquery/jplayer/skins/jbone/jplayer.jbone.css" rel="stylesheet" />
+    <!-- App Base Styles -->
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <!-- Theme -->
     <link rel="stylesheet" type="text/css" href="css/colors.css">
-
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -54,7 +53,8 @@
   </head>
 
   <body>
-  <!-- Begin Template Customization --> 
+
+  <div id="loading"><i class="icon-spinner icon-spin icon-2x"></i></div>
 
   <!-- Wrap all page content here -->
   <div id="app wrap"> 
@@ -81,6 +81,7 @@
         <!-- Begin Footer -->
           <div id="footer">
             <div class="audio-stream">
+            <div class="loading"></div>
             <!-- audio player -->
             <div id="jp-player-main-container">
             <div id="jp-player" class="jp-jplayer"></div>
@@ -132,6 +133,7 @@
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/lib/jquery/jplayer/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="js/lib/spin.min.js"></script>
   <script type="text/javascript" src="js/jquery.bbgPlayer.js"></script>
   <script type="text/javascript" src="js/lib/underscore-min.js"></script>
   <script type="text/javascript" src="js/lib/backbone-min.js"></script>

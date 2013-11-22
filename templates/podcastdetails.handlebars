@@ -1,17 +1,15 @@
 
-<h3 class="back-btn">
-	<a href="#/podcasts">&lt; Podcasts</a>
-</h3
-<div class="podcast-details">
-	<h3>{{published}}</h3>
+<a href="#/podcasts" class="back-btn btn">&lt; Podcasts</a>
+<div class="podcast-details" data-cid="{{cid}}" itemscope itemtype="http://schema.org/AudioObject">
+	<span class="date">{{attributes.published}}</span>
 
     	<a href="" class="podcast-pause" style="display: none;">Pause</a>
-    	<a href="" class="podcast-resume" style="display: none;">Play</a> 
+    	<a href="" class="podcast-resume" style="">Play</a> 
     	<div class="title">
-    		<h2 itemprop="name">{{title}}</h2>
+    		<h2 itemprop="name">{{attributes.title}}</h2>
     		<i class="bbgPodcastInfoDetails "></i>
     	</div>
-    	<div class="desc" itemprop="description">{{{description}}}</div>
+    	<div class="desc" itemprop="description">{{{attributes.description}}}</div>
 
         <meta itemprop="contentURL" content="{{attributes.url}}" />
         <meta itemprop="duration" content="{{attributes.duration}}" />

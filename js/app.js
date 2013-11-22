@@ -15,6 +15,8 @@
 
 			console.log('initalize app');
 
+			//TODO should I make all other Models nested under Channel model??
+
 			//Channel
 			this.channelModel = new Channel();			
 			this.channelModel.fetch({
@@ -80,6 +82,9 @@
 			console.log("Stream Model:");
 			console.log(this.streamModel);*/
 
+			//hide loading
+			$('#loading').fadeOut("slow");
+
 		},
 
 		listen: function(){
@@ -94,6 +99,7 @@
 		},
 
 		podcasts: function () {
+			
 			//display podcasts collection
 			$('#main-content').html(this.PodcastsView.render().el);
 		},

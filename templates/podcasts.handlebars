@@ -1,9 +1,9 @@
 <div class="bbgPodcastSection">
 <ul class="audio-list">
 {{#each models}}
-    <li id="podcast-{{@index}}" itemscope itemtype="http://schema.org/AudioObject">
+    <li id="podcast-{{@index}}" data-cid="{{cid}}" itemscope itemtype="http://schema.org/AudioObject">
     	<a href="" class="podcast-pause" style="display: none;">Pause</a>
-    	<a href="" class="podcast-resume" style="display: none;">Play</a> 
+    	<a href="" class="podcast-resume" style="">Play</a> 
     	<div class="title">
             <a href="#/podcasts/{{cid}}">
         		<span itemprop="name">{{attributes.title}}</span>

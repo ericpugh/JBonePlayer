@@ -52,6 +52,6 @@ div.jp-play-bar, div.jp-podcast-play-bar {
 #jPanelMenu-menu {
 	border-top: 3px solid #34b5d0;
 }
-.custom-SidePanel .custom-Preloader i, #bbgContentTall .custom-Preloader i {
+#loading i{
 	color: #34b5d0;
 }

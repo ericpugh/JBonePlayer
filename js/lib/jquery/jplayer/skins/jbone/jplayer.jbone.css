@@ -271,7 +271,7 @@ div.jp-podcast-play-bar {
 
 /* The seeking class is added/removed inside jPlayer */
 div.jp-seeking-bg {
-	background: url("jplayer.lsap.seeking.gif");
+	background: url("jplayer.jbone.seeking.gif");
 }
 
 /* @end */
@@ -536,24 +536,24 @@ a.jp-video-play-icon {
 	left:50%;
 	top:50%;
 
-	background: url("jplayer.lsap.video.play.png") 0 0 no-repeat;
+	background: url("jplayer.jbone.video.play.png") 0 0 no-repeat;
 	text-indent:-9999px;
 }
 div.jp-video-play:hover a.jp-video-play-icon {
-	background: url("jplayer.lsap.video.play.png") 0 -100px no-repeat;
+	background: url("jplayer.jbone.video.play.png") 0 -100px no-repeat;
 }
 
 
 
 
 
-div.jp-jplayer audio,
-div.jp-jplayer {
+div.jp-player audio,
+div.jp-player {
 	width:0px;
 	height:0px;
 }
 
-div.jp-jplayer {
+div.jp-player {
 	background-color: #000000;
 }
 
@@ -660,10 +660,6 @@ a.jp-shuffle-off:hover {
 
 .jp-no-solution {
 	padding:5px;
-	/*font-size:.8em;
-	background-color:#eee;
-	border:2px solid #009be3;
-	color:#000;*/
 	display:none;
 }
 
