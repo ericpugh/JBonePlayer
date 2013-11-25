@@ -60,7 +60,7 @@ var Channel = Backbone.Model.extend({
 				solution: playerConfig.jplayerSolution,
 				swfPath: playerConfig.jplayerSwfLocation,
 				supplied: 'mp3',
-				preload: 'none',
+				preload: 'auto',
 				wmode: 'window',
 				cssSelectorAncestor: '#jp_container_1',
 				keyEnabled: true,
@@ -75,6 +75,8 @@ var Channel = Backbone.Model.extend({
 				},
 				play: function(event) {
 					console.log('jplayer play event');
+					$('.stream-details .play').hide();
+					$('.stream-details .pause').show();
 				},
 				ended: function(event) {
 				},

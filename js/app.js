@@ -21,7 +21,6 @@
 			this.channelModel = new Channel();			
 			this.channelModel.fetch({
 				success: function(channel){
-					//TODO hide loader?
 					//initialize jPlayer
 					channel.initPlayer();
 		        }
@@ -99,7 +98,6 @@
 		},
 
 		podcasts: function () {
-			
 			//display podcasts collection
 			$('#main-content').html(this.PodcastsView.render().el);
 		},
@@ -112,8 +110,10 @@
 
 		about: function () {
 			//TODO template the about page?
+			var about = Handlebars.getTemplate('about');
 			var channelAttrs = this.channelModel.get('channel');
-			$('#main-content').html(channelAttrs.description);
+			$('#main-content').html(about(channelAttrs));
+			//$('#main-content').html(channelAttrs.description);
 		},
 
 		help: function () {
